@@ -5,7 +5,7 @@ import { encryptData } from "../utils/cryptoUtils";
 export const GlobalModuleContext = createContext(undefined);
 
 export const GlobalModuleProvider = ({ children }) => {
-  const IP_SERVER = "http://localhost:5000";
+  const IP_SERVER = process.env.SERVER_IP;
   const [nodes, setNodes] = useState([]);
   const [fields, setFields] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

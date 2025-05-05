@@ -4,7 +4,6 @@ import React from "react";
 import { Links } from "./Links";
 import styles from "../styles/Header.module.css"; // Importar estilos del módulo
 import { useNavigate } from "react-router-dom";
-// import logo from "../assets/AQUADOMUS_logo2.png"; // Importar la imagen del logo
 
 const navLinks = [
   { to: "/register", label: "Registro" },
