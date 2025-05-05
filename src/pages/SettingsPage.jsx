@@ -21,7 +21,7 @@ export const SettingsPage = () => {
     console.log("Cargando tamaños de base de datos y tablas...");
     fetchDbSize();
     tables.forEach(fetchTableSize);
-  }, [fetchTableSize, fetchDbSize]);
+  }, [fetchTableSize, fetchDbSize, tables]);
 
   return (
     <div className={styles.container}>
