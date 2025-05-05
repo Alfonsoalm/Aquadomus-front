@@ -20,8 +20,8 @@ export const SettingsPage = () => {
   useEffect(() => {
     console.log("Cargando tamaños de base de datos y tablas...");
     fetchDbSize();
-    tables.forEach(fetchTableSize); // Sólo ejecutar una vez al montar
-  }, []); // Ya no es necesario incluir fetchTableSize
+    tables.forEach(fetchTableSize);
+  }, [fetchTableSize, fetchDbSize]);
 
   return (
     <div className={styles.container}>
