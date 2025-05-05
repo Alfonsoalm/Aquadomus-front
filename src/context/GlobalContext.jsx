@@ -27,7 +27,7 @@ export const GlobalModuleProvider = ({ children }) => {
       const response = await axios.get(`${IP_SERVER}/nodes/get-ips`);
       if (response?.data?.success && response.data.data) return response.data.data;
       });
-  }, []);
+  }, [IP_SERVER]);
 
   const getNodes = useCallback(async (filters = {}) => {
 		return handleCheck(async () => {
@@ -35,7 +35,7 @@ export const GlobalModuleProvider = ({ children }) => {
       setNodes(response.data.data)
 			return response.data;
 		});
-  }, []);
+  }, [IP_SERVER]);
 
   const insertNode = useCallback(async (newNodeData) => {
     return handleCheck(async () => {
@@ -44,7 +44,7 @@ export const GlobalModuleProvider = ({ children }) => {
       const response = await axios.post(`${IP_SERVER}/nodes/insert-node`, nodeData);
       return response.data;
     });
-  }, []);
+  }, [IP_SERVER]);
 
   const editNode = useCallback(async (filters, updates) => {
     return handleCheck(async () => {
@@ -57,14 +57,14 @@ export const GlobalModuleProvider = ({ children }) => {
       });
       return response.data;
     });
-  }, []);
+  }, [IP_SERVER]);
   
   const deleteNode = useCallback(async (id) => {
     return handleCheck(async () => {
       const response = await axios.delete(`${IP_SERVER}/nodes/delete-node`, { data: { id } });
       return response.data;
     });
-  }, []);
+  }, [IP_SERVER]);
   
   const getNodesFields = useCallback(async () => {
     return handleCheck(async () => {
@@ -73,35 +73,35 @@ export const GlobalModuleProvider = ({ children }) => {
       setFields(mappedFields);
       return mappedFields;
     });
-  }, []);
+  }, [IP_SERVER]);
 
   const getSensorsFromDB = useCallback(async(id) => {
     return handleCheck(async () => {
       const response = await axios.get(`${IP_SERVER}/sensors/get-sensors`,{ params: { id } });
       return response.data.data;
     });
-  },[]);
+  },[IP_SERVER]);
 
   const getDataSensorFromDB = useCallback(async (sensorIds) => {
     return handleCheck(async () => {
       const response = await axios.get(`${IP_SERVER}/sensors/get-data`,{ params: { sensorIds } });
       return response.data.data;
     });
-  },[]);
+  },[IP_SERVER]);
 
   const getActuatorsFromDB = useCallback(async(id) => {
     return handleCheck(async () => {
       const response = await axios.get(`${IP_SERVER}/actuators/get-actuators`,{ params: { id } });
       return response.data.data;
     })
-  }, [])
+  }, [IP_SERVER])
 
   const getDataActuatorFromDB = useCallback(async(actuatorsIds) => {
     return handleCheck(async () => {
       const response = await axios.get(`${IP_SERVER}/actuators/get-data`,{ params: { actuatorsIds } });
       return response.data.data;
     })
-  }, [])
+  }, [IP_SERVER])
 
   const setActuatorState = useCallback(async(id, state) => {
     return handleCheck(async () => {
@@ -114,7 +114,7 @@ export const GlobalModuleProvider = ({ children }) => {
       console.log("Estado de actuador modificado", response.data.data);
       return response.data.data;
     })
-  }, [])
+  }, [IP_SERVER])
 
   const getActuatorState = useCallback(async(id) => {
     return handleCheck(async () => {
@@ -122,7 +122,7 @@ export const GlobalModuleProvider = ({ children }) => {
       console.log("Estado de actuador modificado", response.data.data);
       return response.data.data;
     })
-  }, [])
+  }, [IP_SERVER])
 
 
     // Nueva función para obtener el tamaño de las tablas
@@ -132,7 +132,7 @@ export const GlobalModuleProvider = ({ children }) => {
         console.log("res", res.data)
         return res.data.data;
       });
-    }, []);
+    }, [IP_SERVER]);
   
     // Nueva función para obtener el tamaño de cada tabla (nodes, sensors, sensorData)
     const getTableSize = useCallback(async (tableDatabase) => {
@@ -143,7 +143,7 @@ export const GlobalModuleProvider = ({ children }) => {
         console.log("res", res.data)
         return res.data.data;
       });
-    }, []);
+    }, [IP_SERVER]);
   
     // Nueva función para borrar los datos de una tabla específica
     const deleteTableData = useCallback(async (tableDatabase) => {
@@ -154,7 +154,7 @@ export const GlobalModuleProvider = ({ children }) => {
         console.log("res", res.data)
         return res.data.data;
       });
-    }, []);
+    }, [IP_SERVER]);
 
   return (
     <GlobalModuleContext.Provider
