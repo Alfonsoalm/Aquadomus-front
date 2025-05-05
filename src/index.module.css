@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+/* Contenedor principal en grid */
+.appContainer {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, contenido y footer */
+  min-height: 100vh;
+}
+
+.appContent {
+  display: flex;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative; 
+  z-index: 1; 
+  background-color: #2a91c4;
+  overflow: hidden;
+}
+
+.appContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../src/assets/fondo_cordoba.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4; /* 60% de transparencia */
+  filter: blur(5px); /* Difumina la imagen */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.content{
+  width: 90%;
+  height: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,69 @@
+.container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.section {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.label {
+  font-size: 18px;
+}
+
+.dbSize {
+  font-size: 18px;
+}
+
+.tableCard {
+  color: #000000;
+  background-color:  #ffffff;;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contentRow{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentRow h3{
+  font-weight: lighter;
+}
+
+
+.deleteButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+
+.deletionMessage {
+  color: #ffffff;
+  margin-top: 16px;
+  font-weight: 600;
+  text-align: center;
+}

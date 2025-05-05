@@ -1,0 +1,45 @@
+.header {
+  background-color: #2a91c4;
+  width: 100%;
+}
+  
+.headerContainer {
+  height: 100px;
+  padding: 0 120px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100px; 
+  height: auto;
+}
+  
+.title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+  flex:0;
+  min-width: 270px;
+  box-sizing: border-box;
+}
+  
+  
+.backButton {
+  min-width: 270px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  flex:0;
+}

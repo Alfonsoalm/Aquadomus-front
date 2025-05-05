@@ -1,0 +1,22 @@
+.nodeSelectorContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nodeSelectorTitle {
+    margin-right: 20px;
+    font-weight:500;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .nodeSelectorDropdown {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+  }

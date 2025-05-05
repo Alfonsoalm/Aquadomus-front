@@ -1,0 +1,17 @@
+.footer {
+  padding: 20px 0px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  gap: 30px;
+}
+
+.logo {
+  height: 50px;
+  max-width: 170px;
+  object-fit: contain;
+}

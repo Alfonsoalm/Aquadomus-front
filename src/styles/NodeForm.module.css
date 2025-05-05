@@ -1,0 +1,26 @@
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.formContainer form{
+  padding: 20px;
+}
+
+.formContainer h2{
+  font-weight:500;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formGrid {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fullWidth {
+  grid-column: 1 / span 2;
+}

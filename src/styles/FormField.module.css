@@ -1,0 +1,35 @@
+/* FormField.css */
+.formField {
+    margin: 10px 0 0 0;
+  }
+  
+.formField input, .formField select {
+  width: 100%;
+  padding: 20px; 
+  font-size: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+  
+.formField input:focus, .formField select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+  
+.column-1 {
+  grid-column: 1;
+}
+
+.column-2 {
+  grid-column: 2;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 0 0 0 15px;
+}
+  
